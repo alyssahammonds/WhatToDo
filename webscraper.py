@@ -1,8 +1,11 @@
 from bs4 import BeautifulSoup
-import pandas as pd
 import requests
 from urllib.request import urlopen
 
+# This program is pulling from eventbrite.com
+# eventbrite.com lets hosts post events to advertise
+# This program will categorize users of our app and return the
+# name and date of events near them that fit their personality.
 
 def allevents():
     #default
@@ -100,7 +103,6 @@ def virtualEvents():
         temp = {eventnamesarr[i]: datesarrray[i]}
         virtualeventsdict.update(temp)
 
-    print(virtualeventsdict)
 
     return virtualeventsdict
 
@@ -125,4 +127,4 @@ def filmEvents():
         temp = {eventnamesarr[i]: datesarrray[i]}
         filmeventsdict.update(temp)
 
-    print(filmeventsdict)
+    return filmeventsdict
