@@ -6,6 +6,7 @@ from urllib.request import urlopen
 # eventbrite.com lets hosts post events to advertise
 # This program will categorize users of our app and return the
 # name and date of events near them that fit their personality.
+# This is the main chunk of our HACKUTA 2022 submission
 
 def allevents():
     #default
