@@ -19,5 +19,6 @@ Currently, we are in the early stages of development and this will only be able 
 ## How does WhatToDo find stuff near me?
 WhatToDo uses a webscraper to search the web for events depending on your location.
 
+## The Future of WhatToDo
 
 ![What_To_Do_Combo](https://user-images.githubusercontent.com/81663980/193452077-1bdd422f-341d-411d-a78c-dbde283df606.png)
