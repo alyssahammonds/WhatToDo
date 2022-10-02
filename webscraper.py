@@ -1,4 +1,3 @@
-
 from bs4 import BeautifulSoup
 import pandas as pd
 import requests
@@ -14,6 +13,7 @@ def socialevents():
     eventNames = doc.find_all('div', class_= 'eds-event-card__formatted-name--is-clamped eds-event-card__formatted-name--is-clamped-three eds-text-weight--heavy')
     for name in eventNames:
         eventnamesarr.append(name.get_text()) #create an array of event names
+        print(name.get_text())
 
     datesarrray = []
     dates = doc.find_all('div', class_ = 'eds-event-card-content__sub-title eds-text-color--primary-brand eds-l-pad-bot-1 eds-l-pad-top-2 eds-text-weight--heavy eds-text-bm')
@@ -24,3 +24,11 @@ def socialevents():
     eventLocation = doc.find_all('div', class_ = 'eds-event-card-content__sub eds-text-bm eds-text-color--ui-600 eds-l-mar-top-1')
     for location in eventLocation:
         arrayLocations.append(location.get_text()) #create an array of event locations
+
+    socialeventsdict = {}
+    for i in range(0, len(eventnamesarr)):
+        temp = {eventnamesarr[i]: datesarrray[i]}
+        socialeventsdict.update(temp)
+
+    return socialeventsdict
+
